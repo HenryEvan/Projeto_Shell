@@ -53,7 +53,7 @@ while [ $c_login = 1 ]; do
 	./bin/space.sh
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
-	echo -e "Opcoes: \n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
+	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
 	read -p "> " choice
 
 	case $choice in
