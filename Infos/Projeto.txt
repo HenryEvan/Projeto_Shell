@@ -1,0 +1,4 @@
+Projeto de Shell para a disciplina de Thiago - Shell Script
+Grupo: Anderson Henrique e Felipe Cardoso
+
+
