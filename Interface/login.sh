@@ -25,14 +25,14 @@ while [ $aut_user != 1 ] ; do
 	done
 	if [ $aut_user != 1 ]; then
 		./space.sh
-		echo -e "Usuario nao encontrado, tente novamente.\n"
+		echo -e "Usuario nao encontrado, tente novamente ou use CTRL+C pra sair.\n"
 	fi
 done
 
 # Senha:
 
 while [ $aut_senha != 1 ] ; do
-	echo -e "User: $ent_user\n"
+	echo -e "User: $ent_user"
 	read -p "Senha: " ent_senha
 	for ((i=1; i<=$tam_log; i++)) do
 		s2=$(cat logins.txt | cut -d ' ' -f3)
@@ -44,7 +44,26 @@ while [ $aut_senha != 1 ] ; do
 	done
 	if [ $aut_senha != 1 ]; then
 		./space.sh
-		echo -e "Senha incorreta, tente novamente.\n"
+		echo -e "Senha incorreta, tente novamente ou use CTRL+C pra sair.\n"
 	fi
+done
+
+while [ $c_login = 1 ]; do
+
+	./space.sh
+	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
+	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
+	echo -e "Opcoes: \n1 - \n2 - \n3 - \n4 - \n5 - Sair\n"
+	read -p "> " choice
+
+	case $choice in
+
+#		1)
+#		2)
+#		3)
+#		4)
+		5)
+			c_login=0
+	esac
 done
 
