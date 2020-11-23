@@ -66,4 +66,3 @@ while [ $c_login = 1 ]; do
 			c_login=0
 	esac
 done
-
