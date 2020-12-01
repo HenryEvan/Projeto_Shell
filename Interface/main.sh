@@ -10,8 +10,8 @@ Contador_Menu=0
 echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
 ./bin/login.sh
 
-# Desativado:
 
+# Desativado:
 #while [ $Contador_Menu != 1 ] ; do
 #	./bin/space.sh
 #	echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
