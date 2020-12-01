@@ -6,7 +6,7 @@ Contador_Menu=0
 
 # Menu:
 
-./Arquivos/space.sh
+#./Arquivos/space.sh
 echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
 ./Arquivos/login.sh
 
