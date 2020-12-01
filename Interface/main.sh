@@ -6,7 +6,7 @@ Contador_Menu=0
 
 # Menu:
 
-#./Arquivos/space.sh
+./Arquivos/space.sh
 echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
 ./Arquivos/login.sh
 
@@ -34,7 +34,7 @@ done
 #	echo "2: Verificar CPU."
 #	echo "3: Verificar Latência."
 #	echo "10: Apenas sair."
-#	read OPTION	
+#	read OPTION
 #	case $OPTION in
 #		1)
 #			./Arquivos/ram.sh;;

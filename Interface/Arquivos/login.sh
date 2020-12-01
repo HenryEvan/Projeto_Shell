@@ -40,6 +40,7 @@ while [ $aut_senha != 1 ] ; do
 		if [ "$loop_senha" = "$ent_senha" ]; then
 			aut_senha=1
 			c_login=1
+			echo oi
 		fi
 	done
 	if [ $aut_senha != 1 ]; then
@@ -50,16 +51,16 @@ done
 
 while [ $c_login = 1 ]; do
 
-#	./Arquivos/space.sh
+	./Arquivos/space.sh
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
 #	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
-	echo -e "Opções:cc1 - Verificar RAM. c2 - Verificar CPU. c3 - Verificar Latência. c4 - Exibir Gráficos. c5 - Sairc"
+	echo -e "Opções:\n\n1 - Verificar RAM. \n - Verificar CPU. \n3 - Verificar Latência. \n4 - Exibir Gráficos. \n5 - Sair\n"
 	read -p "> " choice
 
 	case $choice in
 
-		1) 
+		1)
 			./Arquivos/ram.sh;;
 		2)
 			./Arquivos/cpu.sh;;
