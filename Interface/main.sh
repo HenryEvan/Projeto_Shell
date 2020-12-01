@@ -1,61 +1,48 @@
 # !/bin/bash
 
-COUNTER=0
+# Interface Inicial do Projeto
+# Counters:
+Contador_Menu=0
 
-while [ $COUNTER -ne 1 ] ; do
-	echo "Escolha uma opção: "
-	echo "1: Verificar RAM."
-	echo "2: Verificar CPU."
-	echo "3: Verificar Latência."
-	echo "10: Apenas sair."
-	read OPTION	
-	case $OPTION in
+# Menu:
+
+./bin/space.sh
+echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
+./bin/login.sh
+
+while [ $Contador_Menu != 1 ] ; do
+	./bin/space.sh
+	echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
+	echo -e "\n1 - Logar no Servidor\n5 - Sair\n"
+	read -p "> " Entrada_Menu
+	case $Entrada_Menu in
 		1)
-			./Arquivos/ram.sh;;
-		2)
-			./Arquivos/cpu.sh;;
-		3)
-			./Arquivos/latencia.sh;;
-		10)
-			COUNTER=$((COUNTER+1));;
+			./bin/space.sh
+			./bin/login.sh;;
+		5)
+			Contador_Menu=1
+			clear;;
 	esac
 done
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Interface Inicial do Projeto
-# Counters:
-#Contador_Menu=0
-# Menu:
-#./bin/space.sh
-#echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
-#./bin/login.sh
-# Desativado:
-#while [ $Contador_Menu != 1 ] ; do
-#	./bin/space.sh
-#	echo -e "Interface de Acesso ao Monitoramento - $(date +"%T")"
-#	echo -e "\n1 - Logar no Servidor\n5 - Sair\n"
-#	read -p "> " Entrada_Menu
-#	case $Entrada_Menu in
+# Etc:
+#COUNTER=0
+#while [ $COUNTER -ne 1 ] ; do
+#	echo "Escolha uma opção: "
+#	echo "1: Verificar RAM."
+#	echo "2: Verificar CPU."
+#	echo "3: Verificar Latência."
+#	echo "10: Apenas sair."
+#	read OPTION	
+#	case $OPTION in
 #		1)
-#			./bin/space.sh
-#			./bin/login.sh;;
-#		5)
-#			Contador_Menu=1
-#			clear;;
+#			./Arquivos/ram.sh;;
+#		2)
+#			./Arquivos/cpu.sh;;
+#		3)
+#			./Arquivos/latencia.sh;;
+#		10)
+#			COUNTER=$((COUNTER+1));;
 #	esac
 #done
