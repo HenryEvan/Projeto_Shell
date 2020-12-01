@@ -60,12 +60,13 @@ while [ $c_login = 1 ]; do
 	case $choice in
 
 		1) 
-	./Arquivos/ram.sh;;
+			./Arquivos/ram.sh;;
 		2)
-	./Arquivos/cpu.sh;;
+			./Arquivos/cpu.sh;;
 		3)
-	./Arquivos/latencia.sh;;
-#		4)
+			./Arquivos/latencia.sh;;
+		4)
+			echo "Falta Implementar"
 		5)
 			c_login=0
 	esac
