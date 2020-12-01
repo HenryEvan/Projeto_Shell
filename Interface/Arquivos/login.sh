@@ -53,14 +53,18 @@ while [ $c_login = 1 ]; do
 	./bin/space.sh
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
-	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
+#	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
+	echo -e "Opções:cc1 - Verificar RAM. c2 - Verificar CPU. c3 - Verificar Latência. c4 - Exibir Gráficos. c5 - Sairc"
 	read -p "> " choice
 
 	case $choice in
 
-#		1)
-#		2)
-#		3)
+		1) 
+	./Arquivos/ram.sh;;
+		2)
+	./Arquivos/cpu.sh;;
+		3)
+	./Arquivos/latencia.sh;;
 #		4)
 		5)
 			c_login=0
