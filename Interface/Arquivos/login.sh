@@ -13,6 +13,7 @@ aut_senha=0
 # Login:
 
 while [ $aut_user != 1 ] ; do
+	echo -e "Por favor, insira seu login abaixo: \n"
 	read -p "User: " ent_user
 
 	for ((i=1; i<=$tam_log; i++)) do
@@ -32,6 +33,7 @@ done
 # Senha:
 
 while [ $aut_senha != 1 ] ; do
+	echo -e "Por favor, insira sua senha abaixo: \n"
 	echo -e "User: $ent_user"
 	read -p "Senha: " ent_senha
 	for ((i=1; i<=$tam_log; i++)) do
