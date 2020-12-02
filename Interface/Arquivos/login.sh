@@ -40,7 +40,6 @@ while [ $aut_senha != 1 ] ; do
 		if [ "$loop_senha" = "$ent_senha" ]; then
 			aut_senha=1
 			c_login=1
-			echo oi
 		fi
 	done
 	if [ $aut_senha != 1 ]; then
@@ -55,7 +54,7 @@ while [ $c_login = 1 ]; do
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
 #	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
-	echo -e "Opções:\n\n1 - Verificar RAM. \n - Verificar CPU. \n3 - Verificar Latência. \n4 - Exibir Gráficos. \n5 - Sair\n"
+	echo -e "Opções:\n\n1 - Verificar RAM. \n2 - Verificar CPU. \n3 - Verificar Latência. \n4 - Exibir Gráficos. \n5 - Sair\n"
 	read -p "> " choice
 
 	case $choice in
@@ -67,8 +66,8 @@ while [ $c_login = 1 ]; do
 		3)
 			./Arquivos/latencia.sh;;
 		4)
-			echo "Falta Implementar"
+			echo "Falta Implementar";;
 		5)
-			c_login=0
+			c_login=0;;
 	esac
 done
