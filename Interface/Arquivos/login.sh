@@ -14,7 +14,7 @@ aut_senha=0
 
 while [ $aut_user != 1 ] ; do
 	echo -e "Por favor, insira seu login abaixo: \n"
-	read -p "User: " ent_user
+	read -sp "User: " ent_user
 
 	for ((i=1; i<=$tam_log; i++)) do
 		s1=$(cat ./Arquivos/logins.txt | cut -d ' ' -f2)
@@ -35,7 +35,7 @@ done
 while [ $aut_senha != 1 ] ; do
 	echo -e "Por favor, insira sua senha abaixo: \n"
 	echo -e "User: $ent_user"
-	read -p "Senha: " ent_senha
+	read -sp "Senha: " ent_senha
 	for ((i=1; i<=$tam_log; i++)) do
 		s2=$(cat ./Arquivos/logins.txt | cut -d ' ' -f3)
 		loop_senha=$(echo $s2 | cut -d ' ' -f$i)

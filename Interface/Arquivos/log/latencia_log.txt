@@ -1,0 +1,14 @@
+time=1.52 ms
+time=0.849 ms
+time=0.809 ms
+time=0.889 ms
+time=1.02 ms
+time=1.00 ms
+time=0.752 ms
+time=1.09 ms
+time=0.905 ms
+time=0.677 ms
+ 
+ 
+packet loss,
+ 
