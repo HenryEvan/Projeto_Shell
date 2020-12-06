@@ -14,7 +14,7 @@ aut_senha=0
 
 while [ $aut_user != 1 ] ; do
 	echo -e "Por favor, insira seu login abaixo: \n"
-	read -sp "User: " ent_user
+	read -p "User: " ent_user
 
 	for ((i=1; i<=$tam_log; i++)) do
 		s1=$(cat ./Arquivos/logins.txt | cut -d ' ' -f2)
@@ -35,7 +35,7 @@ done
 while [ $aut_senha != 1 ] ; do
 	echo -e "Por favor, insira sua senha abaixo: \n"
 	echo -e "User: $ent_user"
-	read -sp "Senha: " ent_senha
+	read -p "Senha: " ent_senha
 	for ((i=1; i<=$tam_log; i++)) do
 		s2=$(cat ./Arquivos/logins.txt | cut -d ' ' -f3)
 		loop_senha=$(echo $s2 | cut -d ' ' -f$i)
@@ -56,20 +56,22 @@ while [ $c_login = 1 ]; do
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
 #	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
-	echo -e "Opções:\n\n1 - Verificar RAM. \n2 - Verificar CPU. \n3 - Verificar Latência. \n4 - Exibir Gráficos. \n5 - Sair\n"
+	echo -e "Opções:\n\n1 - Verificar RAM. \n2 - Verificar CPU. \n3 - Verificar Latência. \n4 - Verificar uso de disco. \n5 - Exibir Gráficos. \n6 - Sair\n"
 	read -p "> " choice
 
 	case $choice in
 
 		1)
-			./Arquivos/ram.sh;;
+			./Arquivos/ram.sh;; &> 
 		2)
 			./Arquivos/cpu.sh;;
 		3)
 			./Arquivos/latencia.sh;;
 		4)
-			echo "Falta Implementar";;
+			./Arquivos/disco.sh;;
 		5)
+			echo "Falta Implementar";;
+		6)
 			c_login=0;;
 	esac
 done
