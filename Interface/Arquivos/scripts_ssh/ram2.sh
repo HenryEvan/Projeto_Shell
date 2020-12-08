@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
+number=0
 rm -Rf log_ram.txt
 
 free -h  >> log_ram.txt
 
-scp log_ram.txt felipe@192.168.1.5:~/Projeto_Shell/Interface/Arquivos/log/ram_dir
+scp $number.log_ram.txt felipe@192.168.1.5:~/Projeto_Shell/Interface/Arquivos/log/ram_dir
