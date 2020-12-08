@@ -13,4 +13,4 @@ while IFS= read -r linha || [[ -n "$linha" ]]; do
 	cat Arquivos/scripts_ssh/ram2.sh | ssh $var1@$var2
 done < Arquivos/ipslista.txt
 sleep 10
-cat Arquivos/log/ram_dir/resultado_ram.txt
+./Arquivos/script_leitura.sh 2
