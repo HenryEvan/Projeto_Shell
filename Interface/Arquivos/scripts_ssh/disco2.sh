@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=0
+number=1
 rm -Rf disco_log.txt
 
 df -h >> disco_log.txt

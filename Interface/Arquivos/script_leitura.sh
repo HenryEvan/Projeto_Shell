@@ -27,17 +27,17 @@ esac
 
 echo ' ' > $arq
 
-contagem=$( ls -c | wc -l $dir )
+contagem=$( ls -c $dir | wc -l  )
 
 while [ $contador -lt $contagem ] ; do
 	ler=$(ls -c $dir | grep ^"$contador")
 	IP=$(head -$contador Arquivos/ipslista.txt | tail -1 | cut -d' ' -f2)
 	echo "$IP: " >> $arq
 	echo -e "\n" >> $arq
-	cat $ler >> $arq
+	cat $dir/$ler >> $arq
 	echo -e "\n" >> $arq
 
-	contador=$($contador+1)
+	contador=$(($contador+1))
 done
 
 cat $arq
