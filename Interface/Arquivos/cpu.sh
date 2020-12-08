@@ -1,6 +1,6 @@
 #/bin/bash
 
-rm -Rf Arquivos/log/cpu_log.txt
+rm -Rf Arquivos/log/cpu_dir/*.txt
 counter=0
 var1=" "
 var2=" "
@@ -14,4 +14,4 @@ while IFS= read -r linha || [[ -n "$linha" ]]; do
 
 done < Arquivos/ipslista.txt
 sleep 20
-cat Arquivos/log/cpu_log.txt
+cat Arquivos/log/cpu_dir/resultado_cpu.txt

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-rm -Rf Arquivos/log/log_ram.txt
+rm -Rf Arquivos/log/ram_dir/*.txt
 counter=0
 var1=" "
 var2=" "
@@ -13,4 +13,4 @@ while IFS= read -r linha || [[ -n "$linha" ]]; do
 	cat Arquivos/scripts_ssh/ram2.sh | ssh $var1@$var2
 done < Arquivos/ipslista.txt
 sleep 10
-cat Arquivos/log/log_ram.txt
+cat Arquivos/log/ram_dir/resultado_ram.txt

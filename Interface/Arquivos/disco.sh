@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-rm -Rf Arquivos/log/disco_log.txt
+rm -Rf Arquivos/log/disco_dir/*.txt
 
 counter=0
 var1=" "
@@ -14,4 +14,4 @@ while IFS= read -r linha || [[ -n "$linha" ]]; do
 	cat Arquivos/scripts_ssh/disco2.sh | ssh $var1@$var2
 done < Arquivos/ipslista.txt
 sleep 10
-cat Arquivos/log/disco_log.txt
+cat Arquivos/log/disco_dir/resultado_disco.txt
