@@ -22,7 +22,7 @@ while [ $Contador_Menu != 1 ] ; do
 			Contador_Menu=1;;
 		*)
 			./Arquivos/space.sh
-			echo -e "\n\nOpcao nao identificada, tente novamente.\n"
+			echo -e "\n\nOpção não identificada, tente novamente.\n"
 	esac
 done
 
