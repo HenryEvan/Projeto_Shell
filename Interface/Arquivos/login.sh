@@ -14,7 +14,7 @@ aut_senha=0
 
 while [ $aut_user != 1 ] ; do
 	echo -e "Por favor, insira seu login abaixo: \n"
-	read -p "User: " ent_user
+	read -p "Usuário: " ent_user
 
 	for ((i=1; i<=$tam_log; i++)) do
 		s1=$(cat ./Arquivos/logins.txt | cut -d ' ' -f2)
@@ -26,7 +26,7 @@ while [ $aut_user != 1 ] ; do
 	done
 	if [ $aut_user != 1 ]; then
 		./Arquivos/space.sh
-		echo -e "Usuario nao encontrado, tente novamente ou use CTRL+C pra sair.\n"
+		echo -e "Usuário não encontrado, tente novamente ou use CTRL+C pra sair.\n"
 	fi
 done
 
@@ -34,7 +34,7 @@ done
 
 while [ $aut_senha != 1 ] ; do
 	echo -e "Por favor, insira sua senha abaixo: \n"
-	echo -e "User: $ent_user"
+	echo -e "Usuário: $ent_user"
 	read -p "Senha: " ent_senha
 	for ((i=1; i<=$tam_log; i++)) do
 		s2=$(cat ./Arquivos/logins.txt | cut -d ' ' -f3)
@@ -56,7 +56,7 @@ done
 while [ $c_login = 1 ]; do
 
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
-	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
+	echo -e "Usuário: $ent_user - IP Servidor: 0.0.0.0\n"
 	echo -e "Opções:\n\n1 - Verificar RAM. \n2 - Verificar CPU. \n3 - Verificar Latência. \n4 - Verificar uso de disco. \n5 - Exibir Gráficos. \n6 - Sair\n"
 	read -p "> " choice
 
@@ -80,14 +80,14 @@ while [ $c_login = 1 ]; do
 			./Arquivos/disco.sh;;
 		5)
 			./Arquivos/space.sh
-			echo -e "\n\nNao tenho graficos para mostrar :( \n";;
+			echo -e "\n\nNão tenho gráficos para mostrar agora.. :( \n";;
 		6)
 			./Arquivos/space.sh
 			echo -e "\n\nDeslogando do sistema...\n"
 			c_login=0;;
 		*)
 			./Arquivos/space.sh
-			echo -e "\n\nEntrada Incorreta, tente novamente.\n";;
+			echo -e "\n\nEntrada incorreta, tente novamente.\n";;
 
 	esac
 done
