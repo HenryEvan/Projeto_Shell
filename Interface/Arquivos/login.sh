@@ -42,6 +42,7 @@ while [ $aut_senha != 1 ] ; do
 		if [ "$loop_senha" = "$ent_senha" ]; then
 			aut_senha=1
 			c_login=1
+			./Arquivos/space.sh
 		fi
 	done
 	if [ $aut_senha != 1 ]; then
@@ -50,28 +51,44 @@ while [ $aut_senha != 1 ] ; do
 	fi
 done
 
+# Opcoes:
+
 while [ $c_login = 1 ]; do
 
-	./Arquivos/space.sh
 	echo -e "Logado no Servidor de Monitoramento - $(date +"%T")\n"
 	echo -e "Usuario: $ent_user - IP Servidor: ?\n"
-#	echo -e "Opcoes:\n\n1 - Monitorar um Servidor \n2 - Configurar um novo Servidor\n3 - Alterar Configuracoes\n4 - Exibir Graficos\n5 - Sair\n"
 	echo -e "Opções:\n\n1 - Verificar RAM. \n2 - Verificar CPU. \n3 - Verificar Latência. \n4 - Verificar uso de disco. \n5 - Exibir Gráficos. \n6 - Sair\n"
 	read -p "> " choice
 
 	case $choice in
 
 		1)
-			./Arquivos/ram.sh;; &> 
+			./Arquivos/space.sh
+			echo -e "\n\nCarregando...\n"
+			./Arquivos/ram.sh;;
 		2)
+			./Arquivos/space.sh
+			echo -e "\n\nCarregando...\n"
 			./Arquivos/cpu.sh;;
 		3)
+			./Arquivos/space.sh
+			echo -e "\n\nCarregando...\n"
 			./Arquivos/latencia.sh;;
 		4)
+			./Arquivos/space.sh
+			echo -e "\n\nCarregando...\n"
 			./Arquivos/disco.sh;;
 		5)
-			echo "Falta Implementar";;
+			./Arquivos/space.sh
+			echo -e "\n\nNao tenho graficos para mostrar :( \n";;
 		6)
+			./Arquivos/space.sh
+			echo -e "\n\nDeslogando do sistema...\n"
 			c_login=0;;
+		*)
+			./Arquivos/space.sh
+			echo -e "\n\nEntrada Incorreta, tente novamente.\n";;
+
 	esac
 done
+
