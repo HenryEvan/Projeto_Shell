@@ -3,7 +3,15 @@
 
 
               total        used        free      shared  buff/cache   available
-Mem:          483Mi        57Mi       356Mi       1,0Mi        69Mi       412Mi
+Mem:          483Mi        56Mi       359Mi       1,0Mi        67Mi       412Mi
+Swap:         1,0Gi          0B       1,0Gi
+
+
+192.168.1.10: 
+
+
+              total        used        free      shared  buff/cache   available
+Mem:          987Mi        58Mi       861Mi       1,0Mi        67Mi       824Mi
 Swap:         1,0Gi          0B       1,0Gi
 
 

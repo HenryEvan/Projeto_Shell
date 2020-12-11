@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=1
+number=2
 rm -Rf $number.disco_log.txt
 
 df -h >> $number.disco_log.txt

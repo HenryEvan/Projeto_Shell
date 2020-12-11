@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=1
+number=2
 rm -Rf $number.log_ram.txt
 
 free -h  >> $number.log_ram.txt 
