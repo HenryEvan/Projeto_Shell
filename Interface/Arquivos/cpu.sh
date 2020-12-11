@@ -15,4 +15,7 @@ while IFS= read -r linha || [[ -n "$linha" ]]; do
 
 done < Arquivos/ipslista.txt
 sleep 20
+
+echo -e "Legenda: \n"
+echo -e "r: O número de processos executáveis.\nb: O número de processos em sono.\nus: tempo gasto executando código não kernel.\nsy: tempo gasto executando o código do kernel.\nid: tempo gasto inativo.\nwa: tempo gasto esperando por IO.\nst: tempo gasto roubado de uma máquina virtual."
 ./Arquivos/script_leitura.sh 1

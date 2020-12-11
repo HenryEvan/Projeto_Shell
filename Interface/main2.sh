@@ -41,7 +41,7 @@ echo -e "Login concluído. \n"
 sair=0
 while [ $sair -lt 1 ] ;  do
 	echo -e "Escolha uma das opções: "
-	echo -e "1: Exibir Ram.\n2: Exibir Disco.\n3: Exibir Latencia.\n4: Exibir Procesamento.\n5: Adicionar Hosts.\n10: sair."
+	echo -e "1: Exibir Ram.\n2: Exibir Disco.\n3: Exibir Latencia.\n4: Exibir Procesamento.\n5: Adicionar Hosts.\n6: Vericar dados de um único host.\n10: sair."
 
 	read -p "Opção: " opc
 
@@ -69,6 +69,10 @@ while [ $sair -lt 1 ] ;  do
 		5)
 			./Arquivos/space.sh
 			./Arquivos/configuration.sh
+			;;
+		6)
+			./Arquivos/space.sh
+			./Arquivos/geral.sh
 			;;
 		10)
 			./Arquivos/space.sh
