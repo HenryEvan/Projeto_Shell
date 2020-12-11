@@ -6,19 +6,20 @@ conf2=0
 
 while [ $conf -lt 1 ] ; do
 	./Arquivos/space.sh
-	echo -e "Por favor, insira seu nome de usuário abaixo: \n"  
+	echo -e "Por favor, insira seu nome de usuário abaixo: \n"
 	read -p "Usuário: " var_user
 
 	# conf_user confirma o nome do usuario
 
 	cut -d' ' -f2 Arquivos/logins.txt | grep ^"$var_user" &> /dev/null && conf_user=1 || conf_user=0
-	if [ $conf_user -eq 1 ] ; then 
-		
+	if [ $conf_user -eq 1 ] ; then
+
 		# conf_senha confirma a senha do usuário
 
-		while [ $conf2 -lt 1 ] ; do		
+		while [ $conf2 -lt 1 ] ; do
 			./Arquivos/space.sh
-			echo -e "Por favor, insira sua senha: \n"
+			echo -e "Por favor, insira sua senha. \n"
+			echo -e "Usuário: $var_user \n"
 			read -sp "Senha: " var_senha
 			cut -d' ' -f3 Arquivos/logins.txt | grep ^"$var_senha" &> /dev/null && conf_senha=1 || conf_senha=0
 			if [ $conf_senha -eq 1 ] ; then
@@ -27,9 +28,9 @@ while [ $conf -lt 1 ] ; do
 			else
 				./Arquivos/space.sh
 				echo 'Senha incorreta'
-				
+
 			fi
-		done 
+		done
 
 	else
 		echo 'Nome de usuário incorreto'
@@ -40,12 +41,12 @@ done
 echo -e "Login concluído. \n"
 sair=0
 while [ $sair -lt 1 ] ;  do
-	echo -e "Escolha uma das opções: "
-	echo -e "1: Exibir Ram.\n2: Exibir Disco.\n3: Exibir Latencia.\n4: Exibir Procesamento.\n5: Adicionar Hosts.\n6: Vericar dados de um único host.\n10: sair."
+	echo -e "Escolha uma das opções:\n"
+	echo -e "1 - Exibir RAM.\n2 - Exibir Disco.\n3 - Exibir Latencia.\n4 - Exibir Processamento.\n5 - Adicionar Hosts.\n10 - Sair.\n"
 
-	read -p "Opção: " opc
+	read -p "> " opc
 
-	case $opc in 
+	case $opc in
 		1)
 			./Arquivos/space.sh
 			echo -e "Carregando... \n\n"
@@ -70,13 +71,9 @@ while [ $sair -lt 1 ] ;  do
 			./Arquivos/space.sh
 			./Arquivos/configuration.sh
 			;;
-		6)
-			./Arquivos/space.sh
-			./Arquivos/geral.sh
-			;;
 		10)
 			./Arquivos/space.sh
-			echo "Programa encerrado."
+			echo -e "Programa encerrado.\n"
 			sair=1
 			;;
 		*)
