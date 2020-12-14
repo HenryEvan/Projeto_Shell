@@ -42,7 +42,7 @@ echo -e "Login concluído. \n"
 sair=0
 while [ $sair -lt 1 ] ;  do
 	echo -e "Escolha uma das opções:\n"
-	echo -e "1 - Exibir RAM.\n2 - Exibir Disco.\n3 - Exibir Latencia.\n4 - Exibir Processamento.\n5 - Adicionar Hosts.\n6 - MEMORIA RAM DO PC TESTE.\n10 - Sair.\n"
+	echo -e "1 - Exibir RAM.\n2 - Exibir Disco.\n3 - Exibir Latencia.\n4 - Exibir Processamento.\n5 - Adicionar Hosts.\n6 - Visualizar dados de um único host.\n7 - MEMORIA RAM DO PC TESTE.\n10 - Sair.\n"
 
 	read -p "> " opc
 
@@ -71,7 +71,12 @@ while [ $sair -lt 1 ] ;  do
 			./Arquivos/space.sh
 			./Arquivos/configuration.sh
 			;;
+
 		6)
+			./Arquivos/space.sh
+			./Arquivos/geral.sh
+			;;
+		7)
 			./Arquivos/space.sh
 			echo -e "\nResultados:"
 			./Arquivos/graphic.sh
